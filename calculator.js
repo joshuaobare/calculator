@@ -37,4 +37,10 @@ let result = "";
     return result;
 }
 
-operate('/',7,10)
+const numbtn= document.querySelectorAll('.num')
+console.log(numbtn)
+numbtn.forEach((button) =>{
+    button.addEventListener('click', function(){
+        document.getElementById('disp').innerHTML = button.value}
+        
+        )})
