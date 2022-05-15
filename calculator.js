@@ -1,33 +1,40 @@
 function add(a,b) {
-    return a+b
+    return a+b;
 }
 
 function subtract(a,b) {
-    return a-b
+    return a-b;
 }
 
 function multiply(a,b) {
-    return a*b
+    return a*b;
 }
 
 function divide(a,b) {
-    return a/b
+    return a/b;
 }
 
-function operate(x) {
+function operate(x,a,b) {
+
+let result = "";
+    
     if (x == '+') {
-        add()
+    result = add(a,b);
     }
 
     else if (x == '-') {
-        subtract()
+    result = subtract(a,b);
     }
     
     else if (x == '/') {
-        divide()
+    result = divide(a,b);
     }
     
     else if (x == '*') {
-        multiply()
+    result = multiply(a,b);
     }
+
+    console.log(result);
 }
+
+operate('/',7,10)
