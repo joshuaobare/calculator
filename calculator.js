@@ -14,27 +14,27 @@ function divide(a,b) {
     return a/b;
 }
 
-function operate(x,a,b) {
+function operate(x,c,d) {
 
 let result = "";
     
     if (x == '+') {
-    result = add(a,b);
+    result = add(c,d);
     }
 
     else if (x == '-') {
-    result = subtract(a,b);
+    result = subtract(c,d);
     }
     
     else if (x == '/') {
-    result = divide(a,b);
+    result = divide(c,d);
     }
     
     else if (x == '*') {
-    result = multiply(a,b);
+    result = multiply(c,d);
     }
 
-    console.log(result);
+    return result;
 }
 
 operate('/',7,10)
