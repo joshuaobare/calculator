@@ -37,10 +37,25 @@ let result = "";
     return result;
 }
 
+function clear() {
+    document.getElementById('disp').innerHTML = ""
+}
+
 const numbtn= document.querySelectorAll('.num')
-console.log(numbtn)
+
 numbtn.forEach((button) =>{
     button.addEventListener('click', function(){
-        document.getElementById('disp').innerHTML = button.value}
+        document.getElementById('disp').innerHTML = button.value
         
-        )})
+        
+    })})
+
+const oprbtn = document.querySelectorAll('.opr')
+oprbtn.forEach((button) => {
+    button.addEventListener('click',function(){
+        document.getElementById('disp').innerHTML = operate(button.value,55,6)
+    })
+})
+
+const clrbtn = document.querySelector('#clr')
+clrbtn.addEventListener('click', clear)
