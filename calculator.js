@@ -1,5 +1,15 @@
 const disp = document.getElementById('disp')
-const btn= document.querySelectorAll('button')
+const btns= document.querySelectorAll('button')
+
+let dispvalue = ""
+let firstNum = ""
+let secondNum = ""
+let firstOp = ""
+let secondOp = ""
+let result = ""
+
+
+
 
 function operate(x,c,d) {
 
@@ -28,7 +38,7 @@ function clear() {
     document.getElementById('disp').innerHTML = ""
 }
 
-
+/*
 btns=Array.from(btn)
 
 btns.map( button => {
@@ -52,21 +62,8 @@ btns.map( button => {
 
                 break;
 
+        }})}) */
 
 
-        }
-
-
-
-
-    }
-    
-    
-    
-    
-    
-    
-    )
-})
 
  
