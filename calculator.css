@@ -3,6 +3,11 @@ body {
     margin:0;
     background:linear-gradient(to right, white, #DC143C)
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .calcbtns {
     display: flex;
@@ -17,6 +22,8 @@ body {
     border-width: 10px;
     border-style: solid;
     background-color: white;
+    margin-top: 150px;
+    
 }
 
 .outerdisp {
@@ -43,12 +50,15 @@ button {
     width:60px;
     height:60px;
     cursor: pointer;
+    color: #DC143C;
 }
 
 #r1btns {
     width:120px;
     height:60px;
     font-size: 30px;
+    background-color: #DC143C;
+    color: white;
 }
 
 @font-face{

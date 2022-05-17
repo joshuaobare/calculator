@@ -81,18 +81,15 @@ clickButton();
 
 function numInput(num) {
     if(firstOp === null) {
-        if(dispValue === '0' || dispValue === 0) {
-                                                        // 1st click - handles first operand input
-            dispValue = num;
-        } else if(dispValue === firstNum) {
-                                                        // starts new operation after EqIn()
-            dispValue = num;
+        if(dispValue === '0' || dispValue === 0) {                                                        
+            dispValue = num;                            // 1st click - handles first operand input
+        } else if(dispValue === firstNum) {                                                        
+            dispValue = num;                            // starts new operation after EqIn()
         } else {
             dispValue += num;
         }
-    } else {
-                                                        // 3rd/5th click - inputs to secondNum
-        if(dispValue === firstNum) {
+    } else {                                                        
+        if(dispValue === firstNum) {                    // 3rd/5th click - inputs to secondNum
             dispValue = num;
         } else {
             dispValue += num;
@@ -101,25 +98,22 @@ function numInput(num) {
 }
 
 function oprInput(opr) {
-    if(firstOp != null && secondOp === null) {
-                                                        // 4th click - handles input of second operator
+    if(firstOp != null && secondOp === null) {          // 4th click - handles input of second operator                                                        
         secondOp = opr;
         secondNum = dispValue;
         result = operate(firstOp, Number(firstNum), Number(secondNum));
         dispValue = roundAccurately(result, 15).toString();
         firstNum = dispValue;
         result = null;
-    } else if(firstOp != null && secondOp != null) {
-                                                        // 6th click - new secondOp
-        secondNum = dispValue;
+    } else if(firstOp != null && secondOp != null) {                                                        
+        secondNum = dispValue;                             // 6th click - new secondOp
         result = operate(firstOp, Number(firstNum), Number(secondNum));
         secondOp = opr;
         dispValue = roundAccurately(result, 15).toString();
         firstNum = dispValue;
         result = null;
-    } else { 
-                                                        // 2nd click - handles first operator input
-        firstOp = opr;
+    } else {                                                         
+        firstOp = opr;                                     // 2nd click - handles first operator input
         firstNum = dispValue;
     }
 }
